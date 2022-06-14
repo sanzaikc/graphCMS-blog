@@ -1,10 +1,15 @@
+import { Route, Routes } from "react-router";
+
+import AppLayout from "./layouts/AppLayout";
 import Articles from "./pages/Articles";
 
 function App() {
   return (
-    <div className="App">
-      <Articles />
-    </div>
+    <Routes>
+      <Route path="/" element={<AppLayout />}>
+        <Route index element={<Articles />} />
+      </Route>
+    </Routes>
   );
 }
 

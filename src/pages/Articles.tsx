@@ -8,7 +8,6 @@ export default function Articles() {
 
   return (
     <div>
-      <h1 className="text-red-500">GraphQL Blog</h1>
       {data?.articles.map((article: any) => (
         <div key={article.id}>
           <p>{article.title}</p>
