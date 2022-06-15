@@ -15,4 +15,5 @@ export interface Article {
     name: string;
     avatar: ImageUrl;
   };
+  createdAt: string;
 }

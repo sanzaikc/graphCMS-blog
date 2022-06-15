@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import CardImagePreview from "../CardImagePreview";
 
+import FormatDate from "../../utils/FormatDate";
+
 interface ArticleCardProps {
   title: string;
   slug: string;
@@ -12,6 +14,7 @@ interface ArticleCardProps {
   coverImage: {
     url: string;
   };
+  createdAt: string;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({
@@ -19,6 +22,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   slug,
   content,
   coverImage,
+  createdAt,
 }: ArticleCardProps) => {
   return (
     <Link to={`/${slug}`} className="relative group bg-white">
@@ -27,8 +31,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         <CardImagePreview image={coverImage.url} />
         <div className="py-4">
           <div className="mb-4 text-xs text-gray-500">
-            {/* {new FormatDate(created_at).formalDate()} */}
-            Jun 11 2020
+            {new FormatDate(createdAt).formalDate()}
           </div>
           <div className="my-4 font-semibold line-clamp-2 lg:text-xl">
             {title}

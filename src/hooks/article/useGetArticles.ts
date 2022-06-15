@@ -20,6 +20,7 @@ const ARTICLE_LIST = gql`
           url
         }
       }
+      createdAt
     }
   }
 `;
