@@ -21,7 +21,7 @@ const TheArticle: React.FC = () => {
   return (
     <div>
       <div className="w-full lg:w-2/3 pb-10">
-        <StickyHeading>
+        <StickyHeading sticky>
           <div className="font-semibold text-3xl">{article.title}</div>
         </StickyHeading>
         <div className="font-medium text-gray-500 flex justify-between border-b pb-4">
