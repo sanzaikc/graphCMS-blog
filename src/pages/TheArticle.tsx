@@ -21,7 +21,7 @@ const TheArticle: React.FC = () => {
         <StickyHeading>
           <div className="font-semibold text-3xl">{article.title}</div>
         </StickyHeading>
-        <div className="mb-6 text-sm font-medium text-gray-500 flex justify-between">
+        <div className="text-sm font-medium text-gray-500 flex justify-between">
           <div>{new FormatDate(article.createdAt).formalDate()}</div>
           <div className="flex items-center">
             <Author className="h-3 text-red-200" />
@@ -29,7 +29,7 @@ const TheArticle: React.FC = () => {
           </div>
         </div>
         {article.coverImage && (
-          <div className="h-52 w-full bg-fuchsia-200 lg:h-[400px]">
+          <div className="mt-6 h-52 w-full bg-fuchsia-200 lg:h-[400px]">
             <img
               src={article.coverImage.url}
               alt="Cover"

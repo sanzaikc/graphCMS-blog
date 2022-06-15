@@ -11,7 +11,7 @@ const CardImagePreview: React.FC<CardImagePreviewProps> = ({
 }: CardImagePreviewProps) => {
   return (
     <div className="h-52 w-full flex-shrink-0">
-      {!image ? (
+      {image ? (
         <img src={image} alt="Preview" className="h-full w-full object-cover" />
       ) : (
         <ImagePlaceholder />

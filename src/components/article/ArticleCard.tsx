@@ -36,7 +36,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
     >
       <div className="cursor-pointer">
         {/* // dark:hover:bg-slate-900 */}
-        <CardImagePreview image={coverImage.url} />
+        <CardImagePreview image={coverImage?.url} />
         <div className="py-4">
           <div className="mb-4 text-xs text-gray-500 flex justify-between">
             <div>{new FormatDate(createdAt).formalDate()}</div>
