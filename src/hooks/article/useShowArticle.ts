@@ -6,6 +6,7 @@ const ARTICLE_DETAIL = gql`
       title
       content {
         html
+        raw
       }
       coverImage {
         url

@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import TheDivider from "../components/shared/TheDivider";
 
 import { ReactComponent as Author } from "../assets/author.svg";
-import { useShowArticle } from "../hooks/article/useGetArticle";
+import { useShowArticle } from "../hooks/article/useShowArticle";
 import FormatDate from "../utils/FormatDate";
 
 const TheArticle: React.FC = () => {
