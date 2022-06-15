@@ -5,7 +5,7 @@ import { ArticleGrid } from "../components/article/ArticleGrid";
 import { useGetArticles } from "../hooks/article/useGetArticles";
 
 const Articles: React.FC = () => {
-  const { articles, loading } = useGetArticles() || [];
+  const { articles, loading } = useGetArticles();
 
   if (loading) return <p>Loading...</p>;
 
