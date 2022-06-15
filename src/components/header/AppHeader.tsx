@@ -4,12 +4,10 @@ import AppLogo from "./AppLogo";
 
 const AppHeader: React.FC = () => {
   return (
-    <div>
-      <div className="app-container relative">
-        <div className="sticky top-0 z-10 flex items-center justify-between bg-white py-4 ">
-          {/* dark:bg-slate-800 */}
-          <AppLogo />
-        </div>
+    <div className="sticky top-0 z-10 flex items-center justify-between  py-4  w-full bg-white backdrop-blur bg-opacity-80">
+      <div className="app-container relative w-full">
+        {/* dark:bg-slate-800 */}
+        <AppLogo />
       </div>
     </div>
   );

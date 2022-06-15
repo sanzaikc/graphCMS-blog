@@ -3,7 +3,6 @@ import { useParams } from "react-router";
 
 import StickyHeading from "../components/shared/StickyHeading";
 
-import { ReactComponent as Author } from "../assets/author.svg";
 import { useShowArticle } from "../hooks/article/useShowArticle";
 import FormatDate from "../utils/FormatDate";
 

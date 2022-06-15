@@ -4,7 +4,7 @@ import AppHeader from "../components/header/AppHeader";
 
 export default function AppLayout() {
   return (
-    <div>
+    <div className="relative">
       <AppHeader />
       <div className="app-container pb-16">
         <Outlet />
