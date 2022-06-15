@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router";
 
 import StickyHeading from "../components/shared/StickyHeading";
@@ -12,6 +12,10 @@ const TheArticle: React.FC = () => {
 
   const { article, loading } = useShowArticle(slug);
 
+  useEffect(() => {
+    if (article) document.title = `Chaos | ${article.title}`;
+  }, [article]);
+
   if (loading) return <div>Loading...</div>;
 
   if (!article) return <div>Article not found.</div>;
@@ -21,7 +25,10 @@ const TheArticle: React.FC = () => {
         <StickyHeading>
           <div className="font-semibold text-3xl">{article.title}</div>
         </StickyHeading>
-        <div className="text-sm font-medium text-gray-500 flex justify-between">
+        <div className="text-sm font-medium text-gray-500 flex justify-between border-b pb-4">
+          <div className="capitalize tracking-wide bg-fuchsia-50 text-fuchsia-600  px-2 py-0.5 rounded-sm">
+            {article.flair}
+          </div>
           <div>{new FormatDate(article.createdAt).formalDate()}</div>
           <div className="flex items-center">
             <Author className="h-3 text-red-200" />
@@ -37,8 +44,10 @@ const TheArticle: React.FC = () => {
             />
           </div>
         )}
-        <br />
-        <div dangerouslySetInnerHTML={{ __html: article.content.html }} />
+        <div
+          className="mt-4"
+          dangerouslySetInnerHTML={{ __html: article.content.html }}
+        />
       </div>
     </div>
   );

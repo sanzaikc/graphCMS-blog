@@ -41,7 +41,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         <CardImagePreview image={coverImage?.url} />
         <div className="py-4">
           <div className="mb-4 text-xs text-gray-500 flex items-end justify-between">
-            <div className="capitalize tracking-wide text-xs bg-fuchsia-100  px-1 py-0.5 rounded-sm">
+            <div className="capitalize tracking-wide text-xs bg-fuchsia-50 text-fuchsia-600  px-1 py-0.5 rounded-sm">
               {flair}
             </div>
             <div>{new FormatDate(createdAt).formalDate()}</div>

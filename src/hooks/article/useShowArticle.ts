@@ -8,6 +8,7 @@ const ARTICLE_DETAIL = gql`
         html
         raw
       }
+      flair
       coverImage {
         url
       }
