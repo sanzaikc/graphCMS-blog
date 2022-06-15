@@ -25,14 +25,18 @@ const TheArticle: React.FC = () => {
         <StickyHeading>
           <div className="font-semibold text-3xl">{article.title}</div>
         </StickyHeading>
-        <div className="text-sm font-medium text-gray-500 flex justify-between border-b pb-4">
+        <div className="font-medium text-gray-500 flex justify-between border-b pb-4">
           <div className="capitalize tracking-wide bg-fuchsia-50 text-fuchsia-600  px-2 py-0.5 rounded-sm">
             {article.flair}
           </div>
           <div>{new FormatDate(article.createdAt).formalDate()}</div>
-          <div className="flex items-center">
-            <Author className="h-3 text-red-200" />
-            <span className="mx-2">{article.author.name}</span>
+          <div className="flex items-center space-x-2">
+            <img
+              src={article.createdBy.picture}
+              alt="Avatar"
+              className="h-6 w-6 rounded-full"
+            />
+            <div className="pr-2">{article.createdBy.name}</div>
           </div>
         </div>
         {article.coverImage && (

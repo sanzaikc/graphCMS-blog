@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import CardImagePreview from "../CardImagePreview";
 
-import { ReactComponent as Author } from "../../assets/author.svg";
 import FormatDate from "../../utils/FormatDate";
 
 interface ArticleCardProps {
@@ -20,6 +19,10 @@ interface ArticleCardProps {
     url: string;
   };
   createdAt: string;
+  createdBy: {
+    name: string;
+    picture: string;
+  };
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({
@@ -29,7 +32,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   flair,
   coverImage,
   createdAt,
-  author,
+  createdBy,
 }: ArticleCardProps) => {
   return (
     <Link
@@ -45,9 +48,13 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
               {flair}
             </div>
             <div>{new FormatDate(createdAt).formalDate()}</div>
-            <div className="flex items-center">
-              <Author className="h-3 text-red-200" />
-              <span className="mx-2">{author.name}</span>
+            <div className="flex items-center space-x-2">
+              <img
+                src={createdBy.picture}
+                alt="Avatar"
+                className="h-5 w-5 rounded-full"
+              />
+              <div className="pr-2">{createdBy.name}</div>
             </div>
           </div>
           <div className="my-4 font-semibold line-clamp-1 lg:text-xl group-hover:text-fuchsia-600">

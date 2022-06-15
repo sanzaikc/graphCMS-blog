@@ -15,11 +15,9 @@ const ARTICLE_LIST = gql`
       coverImage {
         url
       }
-      author {
+      createdBy {
         name
-        avatar {
-          url
-        }
+        picture
       }
       createdAt
     }

@@ -12,8 +12,9 @@ const ARTICLE_DETAIL = gql`
       coverImage {
         url
       }
-      author {
+      createdBy {
         name
+        picture
       }
       createdAt
     }

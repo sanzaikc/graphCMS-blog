@@ -11,9 +11,9 @@ export interface Article {
   title: string;
   content: HTMLContent;
   coverImage: ImageUrl;
-  author: {
+  createdBy: {
     name: string;
-    avatar: ImageUrl;
+    picture: string;
   };
   createdAt: string;
 }
