@@ -6,7 +6,7 @@ export default function AppLayout() {
   return (
     <div>
       <AppHeader />
-      <div className="app-container">
+      <div className="app-container pb-16">
         <Outlet />
       </div>
     </div>
