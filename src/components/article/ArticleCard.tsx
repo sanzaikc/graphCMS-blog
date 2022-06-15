@@ -33,7 +33,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   coverImage,
   createdAt,
   createdBy,
-}: ArticleCardProps) => {
+}) => {
   return (
     <Link
       to={`/${slug}`}

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 
 const AppLogo: React.FC = () => {
   const navigate = useNavigate();
+
   return (
     <div
       className="cursor-pointer select-none inline-block"

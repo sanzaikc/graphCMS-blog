@@ -27,7 +27,10 @@ const ARTICLE_LIST = gql`
 export const useGetArticles = () => {
   const { data, error, loading } = useQuery(ARTICLE_LIST);
 
-  const articles: Article[] = data?.articles || [];
+  // const articles: Article[] = data?.articles || [];
+
+  let articles = [] as Article[];
+  articles = data?.articles;
 
   return { articles, error, loading };
 };

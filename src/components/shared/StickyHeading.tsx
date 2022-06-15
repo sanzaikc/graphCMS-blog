@@ -10,7 +10,7 @@ interface StickyHeadingProps {
 const StickyHeading: React.FC<StickyHeadingProps> = ({
   children,
   sticky = false,
-}: StickyHeadingProps) => {
+}) => {
   return (
     <div
       className={`${

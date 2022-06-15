@@ -6,9 +6,7 @@ interface CardImagePreviewProps {
   image: string;
 }
 
-const CardImagePreview: React.FC<CardImagePreviewProps> = ({
-  image,
-}: CardImagePreviewProps) => {
+const CardImagePreview: React.FC<CardImagePreviewProps> = ({ image }) => {
   return (
     <div className="h-52 w-full flex-shrink-0">
       {image ? (

@@ -21,7 +21,7 @@ const ARTICLE_DETAIL = gql`
   }
 `;
 
-export const useShowArticle = (slug: string | undefined) => {
+export const useShowArticle = (slug?: string) => {
   const { loading, error, data } = useQuery(ARTICLE_DETAIL, {
     variables: {
       slug,

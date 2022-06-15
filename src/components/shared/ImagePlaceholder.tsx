@@ -8,7 +8,7 @@ interface ImagePlaceholderProps {
 const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
   placeholder = "article",
   small = false,
-}: ImagePlaceholderProps) => {
+}) => {
   return (
     <div className="grid h-full w-full select-none place-content-center bg-fuchsia-100">
       {/* dark:bg-slate-700 */}
