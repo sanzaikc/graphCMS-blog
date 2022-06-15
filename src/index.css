@@ -17,9 +17,9 @@
     @apply text-xl;
   }
 
-  /* a {
+  a {
     @apply text-blue-600 underline;
-  } */
+  }
 }
 
 body {
@@ -37,4 +37,8 @@ code {
 
 .app-container {
   @apply max-w-6xl mx-auto
+}
+
+.text-decoration-none {
+  @apply no-underline text-current
 }

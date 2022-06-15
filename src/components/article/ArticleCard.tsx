@@ -30,7 +30,10 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   author,
 }: ArticleCardProps) => {
   return (
-    <Link to={`/${slug}`} className="relative group bg-white">
+    <Link
+      to={`/${slug}`}
+      className="relative group bg-white text-decoration-none"
+    >
       <div className="cursor-pointer">
         {/* // dark:hover:bg-slate-900 */}
         <CardImagePreview image={coverImage.url} />
@@ -46,7 +49,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
             {title}
           </div>
           <div
-            className="text-sm text-gray-600 line-clamp-4"
+            className="text-sm text-gray-600 line-clamp-3"
             dangerouslySetInnerHTML={{ __html: content.html }}
           />
         </div>
