@@ -14,7 +14,7 @@ const StickyHeading: React.FC<StickyHeadingProps> = ({
   return (
     <div
       className={`${
-        sticky && " sticky top-20 z-10 "
+        sticky && " sticky top-16 z-10 "
       }bg-white bg-opacity-80 pb-2 backdrop-blur  lg:pb-4`}
     >
       {/* dark:bg-slate-800 */}

@@ -6,6 +6,7 @@ import TheDivider from "../components/shared/TheDivider";
 import { ReactComponent as Author } from "../assets/author.svg";
 import { useShowArticle } from "../hooks/article/useShowArticle";
 import FormatDate from "../utils/FormatDate";
+import StickyHeading from "../components/shared/StickyHeading";
 
 const TheArticle: React.FC = () => {
   const { slug } = useParams();
@@ -16,10 +17,11 @@ const TheArticle: React.FC = () => {
 
   return (
     <div>
-      <TheDivider />
       <div className="w-full lg:w-2/3 pb-10">
-        <h1 className="mt-6 font-semibold"> {article.title}</h1>
-        <div className="mt-4 mb-6 text-sm font-medium text-gray-500 flex justify-between">
+        <StickyHeading>
+          <h1 className="font-semibold">{article.title}</h1>
+        </StickyHeading>
+        <div className="mb-6 text-sm font-medium text-gray-500 flex justify-between">
           <div>{new FormatDate(article.createdAt).formalDate()}</div>
           <div className="flex items-center">
             <Author className="h-3 text-red-200" />
