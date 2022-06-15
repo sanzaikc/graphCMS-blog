@@ -17,9 +17,9 @@
     @apply text-xl;
   }
 
-  a {
+  /* a {
     @apply text-blue-600 underline;
-  }
+  } */
 }
 
 body {
