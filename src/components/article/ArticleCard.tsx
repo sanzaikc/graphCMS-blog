@@ -50,11 +50,11 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
               <span className="mx-2">{author.name}</span>
             </div>
           </div>
-          <div className="my-4 font-semibold line-clamp-2 lg:text-xl group-hover:text-fuchsia-600">
+          <div className="my-4 font-semibold line-clamp-1 lg:text-xl group-hover:text-fuchsia-600">
             {title}
           </div>
           <div
-            className="text-sm text-gray-600 line-clamp-3"
+            className="text-sm text-gray-600 line-clamp-2"
             dangerouslySetInnerHTML={{ __html: content.html }}
           />
         </div>
