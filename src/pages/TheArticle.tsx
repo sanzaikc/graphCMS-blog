@@ -19,8 +19,8 @@ const TheArticle: React.FC = () => {
 
   if (!article) return <div>Article not found.</div>;
   return (
-    <div>
-      <div className="w-full lg:w-2/3 pb-10">
+    <div className="flex space-x-10">
+      <div className="w-full lg:w-2/3 flex-shrink-0">
         <StickyHeading sticky>
           <div className="font-semibold text-3xl">{article.title}</div>
         </StickyHeading>
@@ -51,6 +51,9 @@ const TheArticle: React.FC = () => {
           className="mt-4"
           dangerouslySetInnerHTML={{ __html: article.content.html }}
         />
+      </div>
+      <div className="flex-grow w-full">
+        <StickyHeading sticky>Recent Articles</StickyHeading>
       </div>
     </div>
   );
