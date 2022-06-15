@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 
 import CardImagePreview from "../CardImagePreview";
 
+import { ReactComponent as Author } from "../../assets/author.svg";
 import FormatDate from "../../utils/FormatDate";
 
 interface ArticleCardProps {
+  author: {
+    name: string;
+  };
   title: string;
   slug: string;
   content: {
@@ -23,6 +27,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   content,
   coverImage,
   createdAt,
+  author,
 }: ArticleCardProps) => {
   return (
     <Link to={`/${slug}`} className="relative group bg-white">
@@ -30,8 +35,12 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         {/* // dark:hover:bg-slate-900 */}
         <CardImagePreview image={coverImage.url} />
         <div className="py-4">
-          <div className="mb-4 text-xs text-gray-500">
-            {new FormatDate(createdAt).formalDate()}
+          <div className="mb-4 text-xs text-gray-500 flex justify-between">
+            <div>{new FormatDate(createdAt).formalDate()}</div>
+            <div className="flex items-center">
+              <Author className="h-3 text-red-200" />
+              <span className="mx-1">{author.name}</span>
+            </div>
           </div>
           <div className="my-4 font-semibold line-clamp-2 lg:text-xl">
             {title}
