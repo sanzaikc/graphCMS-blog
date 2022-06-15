@@ -1,4 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
+
 import { Article } from "../../interfaces/article.interface";
 
 const ARTICLE_LIST = gql`
@@ -23,8 +24,10 @@ const ARTICLE_LIST = gql`
   }
 `;
 
-export const useGetArticles = (): Article[] => {
-  const { data } = useQuery(ARTICLE_LIST);
+export const useGetArticles = () => {
+  const { data, error, loading } = useQuery(ARTICLE_LIST);
 
-  return data?.articles;
+  const articles: Article[] = data?.articles || [];
+
+  return { articles, error, loading };
 };
