@@ -6,12 +6,11 @@ interface CardImagePreviewProps {
 
 const CardImagePreview: React.FC<CardImagePreviewProps> = ({
   image,
-  ...props
 }: CardImagePreviewProps) => {
   return (
-    <div {...props}>
+    <div className="h-52 w-full flex-shrink-0">
       {image ? (
-        <img src={image} alt="Cover" className="h-full w-full  object-cover" />
+        <img src={image} alt="Preview" className="h-full w-full object-cover" />
       ) : (
         // <ArticleImagePlaceholder sm={sm} />
         <div>Placeholder</div>

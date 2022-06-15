@@ -14,7 +14,7 @@ interface ArticleCardProps {
   };
 }
 
-export const ArticleCard: React.FC<ArticleCardProps> = ({
+const ArticleCard: React.FC<ArticleCardProps> = ({
   title,
   slug,
   content,
@@ -24,10 +24,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
     <Link to={`/${slug}`} className="relative group bg-white">
       <div className="cursor-pointer">
         {/* // dark:hover:bg-slate-900 */}
-        <CardImagePreview
-          image={coverImage.url}
-          // className="h-52 w-full flex-shrink-0"
-        />
+        <CardImagePreview image={coverImage.url} />
         <div className="py-4">
           <div className="mb-4 text-xs text-gray-500">
             {/* {new FormatDate(created_at).formalDate()} */}
@@ -46,3 +43,5 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
     </Link>
   );
 };
+
+export default ArticleCard;
