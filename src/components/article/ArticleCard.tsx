@@ -39,7 +39,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
             <div>{new FormatDate(createdAt).formalDate()}</div>
             <div className="flex items-center">
               <Author className="h-3 text-red-200" />
-              <span className="mx-1">{author.name}</span>
+              <span className="mx-2">{author.name}</span>
             </div>
           </div>
           <div className="my-4 font-semibold line-clamp-2 lg:text-xl">
