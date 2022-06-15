@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import CardImagePreview from "../CardImagePreview";
+import CardImagePreview from "../shared/CardImagePreview";
 
 import FormatDate from "../../utils/FormatDate";
 

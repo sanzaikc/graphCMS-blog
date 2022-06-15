@@ -1,6 +1,6 @@
 import React from "react";
 
-import ImagePlaceholder from "./shared/ImagePlaceholder";
+import ImagePlaceholder from "./ImagePlaceholder";
 
 interface CardImagePreviewProps {
   image: string;
