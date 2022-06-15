@@ -15,7 +15,7 @@ const StickyHeading: React.FC<StickyHeadingProps> = ({
     <div
       className={`${
         sticky && " sticky top-16 z-10 "
-      }bg-white bg-opacity-80 pb-2 backdrop-blur  lg:pb-4`}
+      }bg-white bg-opacity-80 pb-2 backdrop-blur`}
     >
       {/* dark:bg-slate-800 */}
       <TheDivider />

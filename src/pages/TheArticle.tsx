@@ -14,11 +14,12 @@ const TheArticle: React.FC = () => {
 
   if (loading) return <div>Loading...</div>;
 
+  if (!article) return <div>Article not found.</div>;
   return (
     <div>
       <div className="w-full lg:w-2/3 pb-10">
         <StickyHeading>
-          <h1 className="font-semibold">{article.title}</h1>
+          <div className="font-semibold text-3xl">{article.title}</div>
         </StickyHeading>
         <div className="mb-6 text-sm font-medium text-gray-500 flex justify-between">
           <div>{new FormatDate(article.createdAt).formalDate()}</div>
@@ -36,7 +37,6 @@ const TheArticle: React.FC = () => {
             />
           </div>
         )}
-
         <br />
         <div dangerouslySetInnerHTML={{ __html: article.content.html }} />
       </div>
