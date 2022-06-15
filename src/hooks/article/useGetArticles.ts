@@ -4,13 +4,14 @@ import { Article } from "../../interfaces/article.interface";
 
 const ARTICLE_LIST = gql`
   query GetArticles {
-    articles {
+    articles(orderBy: createdAt_DESC) {
       id
       slug
       title
       content {
         html
       }
+      flair
       coverImage {
         url
       }
