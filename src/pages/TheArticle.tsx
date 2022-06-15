@@ -10,7 +10,7 @@ import FormatDate from "../utils/FormatDate";
 const TheArticle: React.FC = () => {
   const { slug } = useParams();
 
-  const { article, error, loading } = useShowArticle(slug);
+  const { article, loading } = useShowArticle(slug);
 
   if (loading) return <div>Loading...</div>;
 
