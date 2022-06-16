@@ -1,25 +1,15 @@
 import { gql, useQuery } from "@apollo/client";
 
 import { Article } from "../../interfaces/article.interface";
+import { CORE_ARTICLE_FIELDS } from "../../fragments";
 
 const ARTICLE_LIST = gql`
+  ${CORE_ARTICLE_FIELDS}
   query GetArticles {
     articles(orderBy: createdAt_DESC) {
       id
       slug
-      title
-      content {
-        html
-      }
-      flair
-      coverImage {
-        url
-      }
-      createdBy {
-        name
-        picture
-      }
-      createdAt
+      ...CoreArticleFields
     }
   }
 `;

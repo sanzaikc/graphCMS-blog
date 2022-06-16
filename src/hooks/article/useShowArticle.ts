@@ -1,22 +1,12 @@
 import { gql, useQuery } from "@apollo/client";
 
+import { CORE_ARTICLE_FIELDS } from "./../../fragments/index";
+
 const ARTICLE_DETAIL = gql`
+  ${CORE_ARTICLE_FIELDS}
   query GetArticleDetail($slug: String!) {
     article(where: { slug: $slug }) {
-      title
-      content {
-        html
-        raw
-      }
-      flair
-      coverImage {
-        url
-      }
-      createdBy {
-        name
-        picture
-      }
-      createdAt
+      ...CoreArticleFields
     }
   }
 `;
