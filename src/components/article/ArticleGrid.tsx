@@ -15,11 +15,15 @@ export const ArticleGrid: React.FC<ArticleGridProps> = ({
   return (
     <>
       <StickyHeading>Articles</StickyHeading>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        {articles.map((article: any) => (
-          <ArticleCard key={article.id} {...article} />
-        ))}
-      </div>
+      {!articles?.length ? (
+        <div>No articles</div>
+      ) : (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          {articles.map((article: any) => (
+            <ArticleCard key={article.id} {...article} />
+          ))}
+        </div>
+      )}
     </>
   );
 };
