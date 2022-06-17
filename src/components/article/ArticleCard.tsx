@@ -12,9 +12,7 @@ interface ArticleCardProps {
   title: string;
   slug: string;
   flair: string;
-  content: {
-    html: string;
-  };
+  content: { text: string };
   coverImage: {
     url: string;
   };
@@ -62,7 +60,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           </div>
           <div
             className="text-sm text-gray-600 line-clamp-2"
-            dangerouslySetInnerHTML={{ __html: content.html }}
+            dangerouslySetInnerHTML={{ __html: content.text }}
           />
         </div>
       </div>

@@ -51,7 +51,7 @@ const NetworkStatus: React.FC = () => {
 
   return (
     <div
-      className={`fixed left-2 inline-block border bg-white px-4 py-3  shadow transition-transform duration-200 ease-in-out lg:left-1/2 lg:-translate-x-1/2 ${
+      className={`fixed inline-block border bg-white px-4 py-3  shadow transition-transform duration-200 ease-in-out lg:left-1/2 lg:-translate-x-1/2 ${
         !show
           ? "top-0 z-0 -translate-y-full"
           : "top-14 z-10 translate-y-0  lg:top-10"

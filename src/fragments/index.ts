@@ -5,6 +5,7 @@ export const CORE_ARTICLE_FIELDS = gql`
     title
     content {
       html
+      text
     }
     flair
     coverImage {
