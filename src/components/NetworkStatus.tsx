@@ -35,10 +35,10 @@ const NetworkStatus: React.FC = () => {
         {!online ? (
           <div>Your network is currently offline</div>
         ) : (
-          <div className="flex space-x-4 items-center">
+          <div className="flex items-center space-x-4">
             <div>You are back online!</div>
             <div
-              className="underline font-normal cursor-pointer"
+              className="cursor-pointer font-normal underline"
               onClick={reloadPage}
             >
               Reload Page
@@ -51,11 +51,11 @@ const NetworkStatus: React.FC = () => {
 
   return (
     <div
-      className={`fixed inline-block border  bg-white px-4 py-3 transition-transform ease-in-out duration-200 ${
-        !show ? "translate-y-full bottom-0" : "translate-y-0 bottom-10"
+      className={`fixed left-1/2 inline-block -translate-x-1/2 border  bg-white px-4 py-3 transition-transform duration-200 ease-in-out ${
+        !show ? "top-0 z-0 -translate-y-full" : "top-10 z-10 translate-y-0"
       }`}
     >
-      <div className="flex space-x-4 items-center">
+      <div className="flex items-center space-x-4">
         <NetworkIcon />
         <NetworkMessage />
       </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,55 +6,55 @@
 
 @layer base {
   h1 {
-    @apply text-3xl font-medium mb-2;
+    @apply mb-2 text-3xl font-medium;
   }
 
   h2 {
-    @apply text-2xl font-medium mb-2;
+    @apply mb-2 text-2xl font-medium;
   }
 
   h3 {
-    @apply text-xl font-medium mb-2;
+    @apply mb-2 text-xl font-medium;
   }
 
   a {
     @apply text-blue-600 underline;
   }
 
-  ul{
-    @apply list-disc
+  ul {
+    @apply list-disc;
   }
 
-  ol{
-    @apply list-decimal
+  ol {
+    @apply list-decimal;
   }
 
-  li{
-    @apply ml-4
+  li {
+    @apply ml-4;
   }
 
-  p{
-    @apply mb-4
+  p {
+    @apply mb-4;
   }
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .app-container {
-  @apply max-w-7xl mx-auto px-4 lg:px-0
+  @apply mx-auto max-w-7xl px-4 lg:px-0;
 }
 
 .text-decoration-none {
-  @apply no-underline text-current
+  @apply text-current no-underline;
 }

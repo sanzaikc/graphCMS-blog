@@ -6,7 +6,7 @@ const AppLogo: React.FC = () => {
 
   return (
     <div
-      className="cursor-pointer select-none inline-block"
+      className="inline-block cursor-pointer select-none"
       onClick={() => navigate("/")}
     >
       <div className="flex flex-col items-center">

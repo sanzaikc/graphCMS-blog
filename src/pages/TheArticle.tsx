@@ -20,12 +20,12 @@ const TheArticle: React.FC = () => {
   if (!article) return <div>Article not found.</div>;
   return (
     <div className="flex space-x-10">
-      <div className="w-full lg:w-2/3 flex-shrink-0">
+      <div className="w-full flex-shrink-0 lg:w-2/3">
         <StickyHeading sticky>
-          <div className="font-semibold text-3xl">{article.title}</div>
+          <div className="text-3xl font-semibold">{article.title}</div>
         </StickyHeading>
-        <div className="font-medium text-gray-500 flex justify-between border-b pb-4">
-          <div className="capitalize tracking-wide bg-fuchsia-50 text-fuchsia-600  px-2 py-0.5 rounded-sm">
+        <div className="flex justify-between border-b pb-4 font-medium text-gray-500">
+          <div className="rounded-sm bg-fuchsia-50 px-2 py-0.5  capitalize tracking-wide text-fuchsia-600">
             {article.flair}
           </div>
           <div>{new FormatDate(article.createdAt).formalDate()}</div>
@@ -52,7 +52,7 @@ const TheArticle: React.FC = () => {
           dangerouslySetInnerHTML={{ __html: article.content.html }}
         />
       </div>
-      <div className="flex-grow w-full">
+      <div className="w-full flex-grow">
         <StickyHeading sticky>Recent Articles</StickyHeading>
       </div>
     </div>
