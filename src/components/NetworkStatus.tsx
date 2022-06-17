@@ -31,11 +31,11 @@ const NetworkStatus: React.FC = () => {
 
   const NetworkMessage = () => {
     return (
-      <div className="text-lg font-medium">
+      <div className="text-sm font-medium lg:text-lg">
         {!online ? (
-          <div>Your network is currently offline</div>
+          <div>Your network is currently offline.</div>
         ) : (
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
             <div>You are back online!</div>
             <div
               className="cursor-pointer font-normal underline"
@@ -51,8 +51,10 @@ const NetworkStatus: React.FC = () => {
 
   return (
     <div
-      className={`fixed left-1/2 inline-block -translate-x-1/2 border  bg-white px-4 py-3 transition-transform duration-200 ease-in-out ${
-        !show ? "top-0 z-0 -translate-y-full" : "top-10 z-10 translate-y-0"
+      className={`fixed left-2 inline-block border bg-white px-4 py-3  shadow transition-transform duration-200 ease-in-out lg:left-1/2 lg:-translate-x-1/2 ${
+        !show
+          ? "top-0 z-0 -translate-y-full"
+          : "top-14 z-10 translate-y-0  lg:top-10"
       }`}
     >
       <div className="flex items-center space-x-4">
