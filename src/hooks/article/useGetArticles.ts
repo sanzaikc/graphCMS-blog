@@ -15,7 +15,9 @@ const ARTICLE_LIST = gql`
 `;
 
 export const useGetArticles = () => {
-  const { data, error, loading } = useQuery(ARTICLE_LIST);
+  const { data, error, loading } = useQuery(ARTICLE_LIST, {
+    fetchPolicy: "cache-and-network",
+  });
 
   // const articles: Article[] = data?.articles || [];
 
